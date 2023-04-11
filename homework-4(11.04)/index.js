@@ -61,7 +61,7 @@ console.log(price);
 function objectKeys(eat) {
   for (key in eat) {
     let count = 0;
-    for (let key in eat) {
+    for (key in eat) {
       if (eat.hasOwnProperty(key)) { // Проверяет точно ли в оригинальном объекте содержится ключ
         count++;
       }
@@ -112,3 +112,30 @@ function sortMovies(movies) {
 }
 
 console.log(sortMovies(movies));
+
+//9
+let myCity = {
+  name: 'Novosibirsk',
+  population: 1500000,
+  landmarks: ['Тетр Оперы и балета', 'Метромост', 'Кукольный теарт']
+};
+
+for (key in myCity) {
+  console.log(key + ': ' + myCity[key]);
+}
+
+console.log('Количество достопримечательностей: ' + myCity.landmarks.length);
+
+//10
+
+let theBook = {
+  title: 'Jane Air',
+  author: 'Charlotta Bronte',
+  pages: 600
+};
+
+function bookString(theBook) {
+  return `${theBook.title} - ${theBook.author} Издательство: ${theBook.publisher} ${theBook.pages} страниц`;
+}
+
+console.log(bookString(theBook));
